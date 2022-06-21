@@ -11,9 +11,7 @@
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
   },
-  "engines": {
-    "node": "6.2.2"
-  },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
