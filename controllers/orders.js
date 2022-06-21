@@ -1,6 +1,9 @@
-import Cake from "../models/cake";
-import Doughnut from "../models/doughnut";
-import CupCake from "../models/cupCake";
+// import Cake from "../models/cake";
+const Cake = require("../models/cake");
+// import Doughnut from "../models/doughnut";
+const Doughnut = require("../models/doughnut");
+// import CupCake from "../models/cupCake";
+const CupCake = require("../models/cupCake");
 
 export const cakeOrder = async (req, res) => {
   try {
