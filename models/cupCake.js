@@ -26,6 +26,9 @@ const cupCakeSchema = new Schema(
     flavour: {
       type: String,
     },
+    delivery: {
+      type: String,
+    },
     price: {
       type: String,
       required: true,
