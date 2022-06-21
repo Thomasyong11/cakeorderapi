@@ -2,8 +2,7 @@
 const express = require("express");
 
 const router = express.Router();
-
-import {
+const {
   cakeOrder,
   doughnutOrder,
   cupCakeOrder,
@@ -11,7 +10,17 @@ import {
   removecake,
   removecupcake,
   removedoughnut,
-} from "../controllers/orders";
+} = require("../controllers/orders");
+
+// import {
+//   cakeOrder,
+//   doughnutOrder,
+//   cupCakeOrder,
+//   getOrders,
+//   removecake,
+//   removecupcake,
+//   removedoughnut,
+// } from "../controllers/orders";
 
 router.post("/cake", cakeOrder);
 router.post("/doughnut", doughnutOrder);
