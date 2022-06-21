@@ -54,4 +54,4 @@ const cakeSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Cake", cakeSchema);
+module.exports = mongoose.model("Cake", cakeSchema);

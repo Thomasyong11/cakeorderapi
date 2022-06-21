@@ -5,7 +5,7 @@ const Doughnut = require("../models/doughnut");
 // import CupCake from "../models/cupCake";
 const CupCake = require("../models/cupCake");
 
-export const cakeOrder = async (req, res) => {
+const cakeOrder = async (req, res) => {
   try {
     // console.log(req.body);
     const {
@@ -48,7 +48,7 @@ export const cakeOrder = async (req, res) => {
   }
 };
 
-export const doughnutOrder = async (req, res) => {
+const doughnutOrder = async (req, res) => {
   try {
     const { name, contact, quantity, delivery, price } = req.body;
     //
@@ -75,7 +75,7 @@ export const doughnutOrder = async (req, res) => {
   }
 };
 
-export const cupCakeOrder = async (req, res) => {
+const cupCakeOrder = async (req, res) => {
   try {
     const { name, contact, flavour, numberOfOrders, delivery, price } =
       req.body;
@@ -106,7 +106,7 @@ export const cupCakeOrder = async (req, res) => {
   }
 };
 
-export const getOrders = async (req, res) => {
+const getOrders = async (req, res) => {
   try {
     const allcake = await Cake.find().sort({ _id: -1 }).exec();
     const allcupcake = await CupCake.find().sort({ _id: -1 }).exec();
@@ -118,7 +118,7 @@ export const getOrders = async (req, res) => {
   }
 };
 
-export const removecake = async (req, res) => {
+const removecake = async (req, res) => {
   try {
     const { id } = req.body;
     console.log(id);
@@ -129,7 +129,7 @@ export const removecake = async (req, res) => {
     return res.status(400).send("Error.Try again");
   }
 };
-export const removecupcake = async (req, res) => {
+const removecupcake = async (req, res) => {
   try {
     const { id } = req.body;
     console.log(id);
@@ -140,7 +140,7 @@ export const removecupcake = async (req, res) => {
     return res.status(400).send("Error.Try again");
   }
 };
-export const removedoughnut = async (req, res) => {
+const removedoughnut = async (req, res) => {
   try {
     const { id } = req.body;
     console.log(id);
@@ -150,4 +150,13 @@ export const removedoughnut = async (req, res) => {
     console.log(err);
     return res.status(400).send("Error.Try again");
   }
+};
+module.exports = {
+  cakeOrder,
+  doughnutOrder,
+  cupCakeOrder,
+  getOrders,
+  removecake,
+  removecupcake,
+  removedoughnut,
 };

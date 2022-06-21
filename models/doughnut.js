@@ -28,4 +28,4 @@ const doughnutSchema = new Schema(
   },
   { timestamps: true }
 );
-export default mongoose.model("Doughnut", doughnutSchema);
+module.exports = mongoose.model("Doughnut", doughnutSchema);

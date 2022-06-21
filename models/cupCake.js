@@ -1,4 +1,5 @@
 // import mongoose from "mongoose";
+const { model } = require("mongoose");
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
@@ -32,5 +33,4 @@ const cupCakeSchema = new Schema(
   },
   { timestamps: true }
 );
-
-export default mongoose.model("CupCake", cupCakeSchema);
+module.exports = mongoose.model("CupCake", cupCakeSchema);
